@@ -1,0 +1,79 @@
+\documentclass[11pt,a4paper, final]{moderncv}
+
+\usepackage{color}
+\usepackage{fontspec}
+\moderncvtheme{classic}
+
+% the (custom) color which will be used in the cv
+\definecolor{color1}{RGB}{1, 52, 64}
+
+% scale the page layout
+\usepackage[scale=0.75]{geometry}
+
+% change width of the column with the dates
+\setlength{\hintscolumnwidth}{2.5cm}
+
+% required when changing page layout lengths
+\AtBeginDocument{\recomputelengths}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage[utf8]{inputenc}
+
+% insert dummy text (used in the letter)
+\usepackage{lipsum}
+
+% used for \begin{comment}...\end{comment}
+\usepackage{verbatim}
+
+% Minion Pro is used as the main font, if you don't
+% have it installed uncomment this line or choose another pretty font
+\setmainfont{Minion Pro}
+
+% the moderncv package will populate a lot of the pdf meta-information.
+% this can be used to change some of these infos.
+\AfterPreamble{\hypersetup{
+  pdfcreator={XeLaTeX},
+  pdftitle={Cover Letter of Alexey Rodiontsev}
+}}
+
+% for the icons (telephone, globe). i found the icons provided by the
+% fontawesome package prettier than the standard moderncv icons.
+\usepackage{fontawesome}
+
+% personal data
+\firstname{Alexey}
+\familyname{Rodiontsev}
+\address{Wilhelminaplantsoen 80}{1111 CP, Diemen, The Netherlands}
+
+% i use the extrainfo command for additional information, since i
+% want to use custom icons and have finer control over spacing.
+\extrainfo{
+	\faPhone\hspace{0.3em}+49 137 3717321\\
+	{\small\faEnvelope}\hspace{0.3em}isaac@asimov.com\\
+	\faGlobe\hspace{0.3em}http://isaac.asimov.com
+}
+
+% picture, resized to a height of 84pt
+\photo[84pt]{picture/photo}
+
+% spacing before (sub)sections
+\newcommand{\spacesection}{\vspace{0.4cm}}
+\newcommand{\spacesubsection}{\vspace{0.2cm}}
+
+%===========================
+\begin{document}
+
+\recipient{Human Resources}{Some Company Ltd.\\Some Street 123\\12345 Some City}
+\date{\today}
+\opening{Dear Sir or Madam,}
+\closing{Sincerely yours,}
+\enclosure[Attached]{curriculum vit\ae{}}
+
+\makelettertitle
+
+\lipsum[1-3]
+
+\makeletterclosing
+
+
+\end{document}

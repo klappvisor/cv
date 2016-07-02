@@ -1,0 +1,80 @@
+\documentclass[11pt,a4paper, final]{moderncv}
+
+\usepackage{color}
+\usepackage{fontspec}
+\moderncvtheme{classic}
+
+% the (custom) color which will be used in the cv
+\definecolor{color1}{RGB}{1, 52, 64}
+
+% scale the page layout
+\usepackage[scale=0.75]{geometry}
+
+% change width of the column with the dates
+\setlength{\hintscolumnwidth}{2.5cm} 
+
+% required when changing page layout lengths
+\AtBeginDocument{\recomputelengths} 
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage[utf8]{inputenc}
+
+% Minion Pro is used as the main font, if you don't
+% have it installed uncomment this line or choose another pretty font
+%\setmainfont{Minion Pro}
+
+% the moderncv package will populate a lot of the pdf meta-information.
+% this can be used to change some of these infos.
+\AfterPreamble{\hypersetup{
+  pdfcreator={XeLaTeX},
+  pdftitle={CV of Alexey Rodiontsev}
+}}
+
+% for the icons (telephone, globe). i found the icons provided by the
+% fontawesome package prettier than the standard moderncv icons.
+\usepackage{fontawesome}
+
+% personal data
+\firstname{Alexey}
+\familyname{Rodiontsev}
+\address{Amsterdam Area, The Netherlands}
+
+% i use the extrainfo command for additional information, since i 
+% want to use custom icons and have finer control over spacing.
+\extrainfo{
+	\faPhone\hspace{0.3em}+31 6 26225563\\
+	{\small\faEnvelope}\hspace{0.3em}alex.rodiontsev@gmail.com\\
+	\faGlobe\hspace{0.3em}http://mylifeecho.com
+}
+
+% spacing before (sub)sections
+\newcommand{\spacesection}{\vspace{0.4cm}}
+\newcommand{\spacesubsection}{\vspace{0.2cm}}
+
+%===========================
+\begin{document}
+
+\maketitle
+
+\input(sections/personal.tex)
+
+\spacesection
+\input{sections/summary.tex}
+
+\spacesection
+\input{sections/employment.tex}
+
+\spacesection
+\input{sections/skills.tex}
+
+\spacesection
+\input{sections/experience.tex}
+
+\spacesection
+\input{sections/education.tex}
+
+\spacesection
+\input{sections/certification.tex}
+
+\spacesection
+\input{sections/coursework.tex}
